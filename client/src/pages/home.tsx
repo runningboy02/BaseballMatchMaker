@@ -31,7 +31,7 @@ export default function Home() {
         <section className="bg-white rounded-2xl shadow-xl p-8 mb-8 border-t-4 border-team-blue">
           <div className="text-center">
             <img 
-              src="http://t1.daumcdn.net/brunch/service/user/eHuc/image/qSh7aMyaJL-O6U_DmmGNNjYf7rM.png" 
+              src="https://i.ibb.co/bR6bf2s4/001.png" 
               alt="Baseball stadium with crowd" 
               className="rounded-xl shadow-lg w-full h-48 object-cover mb-6" 
             />
@@ -131,9 +131,7 @@ export default function Home() {
           </div>
           <p className="text-gray-400 mb-4">KBO 리그 팀 추천 서비스</p>
           <div className="flex justify-center space-x-6 text-sm text-gray-400">
-            <a href="#" className="hover:text-white">개인정보처리방침</a>
-            <a href="#" className="hover:text-white">이용약관</a>
-            <a href="#" className="hover:text-white">문의하기</a>
+            <a href="mailto:'kbokbotest@gmail.com'" className="hover:text-white">메일로 문의하기</a>
           </div>
           <p className="text-xs text-gray-500 mt-4">© 2024 Baseball Team Finder. All rights reserved.</p>
         </div>
