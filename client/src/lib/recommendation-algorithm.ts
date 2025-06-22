@@ -182,9 +182,13 @@ teamScores['kia'] += 2;
   // Calculate match percentage (normalize to 0-100%)
   const maxPossibleScore = answers.length * 3; // Each question can give max 3 points
   const matchPercentage = Math.round((maxScore / maxPossibleScore) * 100);
-
+console.log(`Recommended Team: ${recommendedTeam.name}, Match Percentage: ${matchPercentage}%`);
+function getRandom(min: number, max: number)
+{
+	return Math.floor(Math.random() * (max - min + 1) + min);
+}
   return {
     recommendedTeam,
-    matchPercentage: Math.max(matchPercentage, 65), // Minimum 65% for better UX
+    matchPercentage: Math.max(matchPercentage, getRandom(50, 65)), // Minimum 65% for better UX
   };
 }
