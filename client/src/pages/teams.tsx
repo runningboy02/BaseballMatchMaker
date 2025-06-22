@@ -96,7 +96,7 @@ export default function Teams() {
                       <TableHead>팀명</TableHead>
                       <TableHead>연고지</TableHead>
                       <TableHead>홈구장</TableHead>
-                      <TableHead>창단</TableHead>
+                      <TableHead>창단 (모기업 변경)</TableHead>
                       <TableHead>우승</TableHead>
                       <TableHead>에이스</TableHead>
                       <TableHead>스타선수</TableHead>

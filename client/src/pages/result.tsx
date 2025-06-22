@@ -140,6 +140,13 @@ console.log(isShare)
     <div className="min-h-screen">
       {/* Header */}
       <header className="bg-white shadow-lg border-b-4 border-baseball-green">
+        {/*
+    <meta property="og:url" content="https://kbotest.netlify.app/"/>
+    <meta property="og:title" content="KBO 응원팀 테스트"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="미리보기 섬네일 이미지 주소"/>
+    <meta property="og:description" content="웹사이트를 소개글"/>
+        */}
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-center">
             <svg className="w-8 h-8 text-baseball-green mr-3" fill="currentColor" viewBox="0 0 24 24">

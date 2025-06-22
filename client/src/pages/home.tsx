@@ -16,7 +16,7 @@ export default function Home() {
             <svg className="w-8 h-8 text-baseball-green mr-3" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
             </svg>
-            <h1 className="text-3xl font-bold text-gray-800">나만의 야구팀 찾기</h1>
+            <h1 className="text-3xl font-bold text-gray-800">KBO 응원팀 테스트</h1>
             <svg className="w-8 h-8 text-baseball-green ml-3" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
             </svg>
@@ -36,7 +36,7 @@ export default function Home() {
               className="rounded-xl shadow-lg w-full h-48 object-cover mb-6" 
             />
             
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">⚾ 당신의 운명의 팀을 찾아보세요!</h2>
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">⚾ 당신의 야구 DNA를 찾아드립니다!</h2>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
               간단한 설문조사를 통해 당신의 성향과 가장 잘 맞는 KBO 리그 팀을 추천해드립니다.<br />
               총 <span className="font-bold text-team-blue">8개의 질문</span>에 답하시면 됩니다.
