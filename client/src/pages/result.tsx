@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { getSurveyResult, type SurveyResult } from "@/lib/static-storage";
+import { url } from "inspector";
 
 
 
@@ -22,8 +23,8 @@ export default function Result() {
   }, [shareId]);
 
   const handleShare = (platform: string) => {
-    const url = window.location.href;
-    const text = `나의 추천 KBO 팀은 ${result?.recommendedTeam.name}! 매칭률 ${result?.matchPercentage}%`;
+    const url = window.location.href + `?share=t`;
+    const text = `나의 추천 KBO 팀은 매칭률 ${result?.matchPercentage}%로 ${result?.recommendedTeam.name}! `;
     
     let shareUrl = "";
     
@@ -49,7 +50,7 @@ export default function Result() {
 
   const handleCopyLink = async () => {
     try {
-      await navigator.clipboard.writeText(window.location.href);
+      await navigator.clipboard.writeText(window.location.href+ `?share=t`);
       toast({
         title: "링크 복사됨",
         description: "결과 링크가 클립보드에 복사되었습니다.",
@@ -127,7 +128,14 @@ export default function Result() {
       </div>
     );
   }
-
+ const urlParams = new URL(location.href).searchParams;
+const share = urlParams.get('share');
+var isShare = false;
+if (share === "t") {
+    isShare = true;
+}
+console.log(isShare,share);
+console.log(isShare)
   return (
     <div className="min-h-screen">
       {/* Header */}
@@ -162,11 +170,9 @@ export default function Result() {
               {/* Team logo placeholder */}
               <div 
                 className="w-32 h-32 rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg"
-                style={{ backgroundColor: result.recommendedTeam.color }}
-              >
-                <svg className="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                </svg>
+              ><img 
+            src={`https://6ptotvmi5753.edge.naverncp.com/KBO_IMAGE/emblem/regular/fixed/emblem_${result.recommendedTeam.logo}.png`}>
+          </img>
               </div>
               <h3 className="text-4xl font-bold text-gray-800 mb-2">{result.recommendedTeam.name}</h3>
               <div className="flex items-center justify-center mb-4">
@@ -265,12 +271,12 @@ export default function Result() {
               </div>
 
               <div className="space-y-3">
-                <Link href="/survey">
+                <Link href="/">
                   <Button className="w-full md:w-auto px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold rounded-xl text-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border-2 border-orange-400">
                     <svg className="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/>
                     </svg>
-                    다시 테스트하기
+                    {isShare ?"나도 해보기" :  "다시 테스트하기"}
                   </Button>
                 </Link>
                 <div className="pt-4">

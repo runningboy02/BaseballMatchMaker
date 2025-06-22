@@ -13,6 +13,7 @@ export interface SurveyResult {
     manager: string;
     mascot: string;
     color: string;
+    logo: string;
   };
   matchPercentage: number;
   createdAt: string;

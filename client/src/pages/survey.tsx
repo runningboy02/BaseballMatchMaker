@@ -112,7 +112,7 @@ export default function Survey() {
         <Card className="bg-white rounded-2xl shadow-xl border-t-4 border-team-orange">
           <CardContent className="p-8">
             <h3 className="text-2xl font-bold text-gray-800 mb-6">
-              Q{currentQuestion.id}. {currentQuestion.title}
+              {currentQuestion.title}
             </h3>
             
             <div className="space-y-4">
