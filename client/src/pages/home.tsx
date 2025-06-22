@@ -31,7 +31,7 @@ export default function Home() {
         <section className="bg-white rounded-2xl shadow-xl p-8 mb-8 border-t-4 border-team-blue">
           <div className="text-center">
             <img 
-              src="https://images.unsplash.com/photo-1566577739112-5180d4bf9390?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=400" 
+              src="http://t1.daumcdn.net/brunch/service/user/eHuc/image/qSh7aMyaJL-O6U_DmmGNNjYf7rM.png" 
               alt="Baseball stadium with crowd" 
               className="rounded-xl shadow-lg w-full h-48 object-cover mb-6" 
             />
